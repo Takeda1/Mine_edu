@@ -1,0 +1,139 @@
+Classes:
+
+
+Client:
+
+PlayerScenarioListener:
+	Get(whether player fails current objective)
+	Get(whether player completes current objective)
+	Get(whether player answers current question right)
+	Get(whether player answers current question wrong)
+	Return those values to the Scenario Handler
+
+Server:
+
+Scenario-Generator:
+	GenerateScenario-Handler(Course, List Topics, boolean True/False, boolean Multiple-Choice, boolean Matching, int noHavetoAnswer)
+	
+Scenario-Handler:
+	Constant Input: Playerid, 
+	GenerateWorld(){
+		Creates the physical world
+	};
+	DefineScenario(List Topics){
+		Fills Scenario full of States
+		
+	}
+	
+	GenerateScenario(Playerid){
+		Creates an instance of Scenario, based on playerid
+	};
+	
+	UpdateScenario(Playerid, PlayerScenarioListener Values){
+		
+	}
+	
+
+Scenario:
+	A graph of states
+	StartState
+	CurrentState
+	List Topics
+	List QuestionNodes
+	
+	
+	
+	
+	getQuestion(int difficulty=CurrentState.GroupDifficultyNumber, String topic=CurrentState.Topic, List QuestionNodes)
+		create(tempList Questions)
+		get(GroupDifficultyNo)
+		for(tempList){remove Question if (GroupDifficultyNo!=difficulty))
+		choose question from tempList based on previous question's QuestionWeight
+		QuestionWeight=(increase: GroupDifficultyNumber, hasn't already done it)
+		
+		
+		if(topic==
+	
+	
+	# of Questions answered right
+	# of Questions answered wrong
+	State.
+	Questionright(CurrentState = NextStateIfRight);
+	Questionwrong(CurrentState = NextStateIfWrong);
+	ObjectiveComplete(CurrentState = NextStateifObjectiveComplete);
+	ObjectiveFailed(CurrentState = NextStateifObjectiveFailed);
+	
+Question Node:
+	
+	
+State:
+	QuestionNode
+	Topic
+	int Win;
+	int Lose;
+	int Counter=0;
+	
+	
+	
+	State(int Win, int Lose)
+	increase(Counter++){}
+	decrease(Counter--){}
+	boolean Win(){
+	
+	if(Counter>=Win){
+	return true);
+	}else{
+	return false;
+	}
+	
+	boolean Lose(){
+	if(Counter<=Lose){
+	return true);
+	}else{
+	return false;
+	}
+	
+	State NextStateifObjectiveComplete
+	State NextStateifObjectiveFailed
+	
+	setQuestion Node(State){}
+	setObjective Node(State){}
+	setNextStateIfRight(State){}
+	setNextStateIfWrong(State){}
+Objective:
+
+
+	
+	
+	
+
+	
+Topic:
+	List of Questions
+	Sorted into Groups of difficulty
+Question:
+	Think of ability to handle html, CSV
+	Int "Question no."
+	String "Question"
+	String "Answer"
+	String "Alternative1"
+	String "Alternative2"
+	String "Alternative3"
+	String "Alternative4"
+	Int GroupDifficultyNo
+	int QuestionType
+	
+
+	
+
+	
+
+QuestionSession Node:
+	Attributes: 
+		
+	
+
+
+	
+	
+	
