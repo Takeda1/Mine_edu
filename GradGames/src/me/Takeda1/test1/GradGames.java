@@ -124,6 +124,16 @@ public class GradGames extends JavaPlugin{
 		int rows = 0;
 		try{
 			rows = s.getFetchSize();
+			if(rows<1){return;}
+			for(int i=1; i<=rows; i++){
+				s.absolute(i);
+				System.out.println("");
+				System.out.print("Topic: "+s.getString(1));
+				System.out.print("Difficulty: "+s.getInt(2));
+				System.out.print("Type: "+s.getInt(3));
+				System.out.print("Question: "+s.getString(4));
+				System.out.println("");
+			}
 		} catch(SQLException e){
 			e.printStackTrace();
 		}
