@@ -1,8 +1,7 @@
 name: GradGames
 main: me.Takeda1.test1.GradGames
 version: 1.0
-description: >
-             Changes player's game mode.
+description: Changes player's game mode.
 commands:
   creative:
     description: Toggles game mode to creative.
@@ -13,3 +12,18 @@ commands:
     permissions: GradGames.survival
     default: true
     usage: /survival
+  query:
+    description: Query test
+    permissions: GradGames.survival
+    default: true
+    usage: /query
+  newRow:
+    description: insert test
+    permissions: GradGames.survival
+    default: true
+    usage: /newrow
+  newquestion:
+    description: insert a new question
+    permissions: GradGames.survival
+    default: true
+    usage: /newquestion
